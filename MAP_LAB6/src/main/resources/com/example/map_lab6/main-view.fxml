@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.map_lab6.src.controller.MainController">
+    <!-- Stânga: Tabel cu utilizatori -->
+    <left>
+        <VBox spacing="10" BorderPane.alignment="CENTER">
+            <Label text="Users" />
+            <TableView fx:id="userTable">
+                <columns>
+                    <TableColumn fx:id="firstNameColumn" text="First Name" />
+                    <TableColumn fx:id="lastNameColumn" text="Last Name" />
+                </columns>
+            </TableView>
+        </VBox>
+    </left>
+
+    <!-- Dreapta: Lista de prieteni și butoane -->
+    <center>
+        <VBox spacing="10" BorderPane.alignment="CENTER">
+            <Label text="Friends" />
+            <ListView fx:id="friendListView" />
+            <HBox spacing="10" alignment="CENTER">
+                <Button text="Delete Friendship" fx:id="deleteFriendButton" />
+                <Button text="Add Friendship" fx:id="addFriendButton" />
+                <Button text="View Requests" fx:id="viewRequestsButton" />
+            </HBox>
+        </VBox>
+    </center>
+
+    <!-- Jos: Butoane generale -->
+    <bottom>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Add User" fx:id="addUserButton" />
+            <Button text="Delete User" fx:id="deleteUserButton" />
+        </HBox>
+    </bottom>
+</BorderPane>

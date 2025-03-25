@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiex1.controller.FriendRequestsController">
+
+    <children>
+        <!-- Tabel pentru afișarea cererilor de prietenie -->
+        <TableView fx:id="friendRequestsTableView" AnchorPane.bottomAnchor="60.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <columns>
+                <TableColumn fx:id="requesterNameColumn" prefWidth="300.0" text="Requester Name" />
+                <TableColumn fx:id="requestDateColumn" prefWidth="278.6666564941406" text="Request Date" />
+            </columns>
+        </TableView>
+
+        <!-- Butoane pentru acceptarea sau respingerea cererii -->
+        <HBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button onAction="#handleAcceptRequest" text="Accept" />
+                <Button onAction="#handleDenyRequest" text="Reject" />
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
